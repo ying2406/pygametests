@@ -42,6 +42,7 @@ class BlockObject(object):
         if s.R.y < miny:
             miny = s.R.y
     return (minx,miny)
+
   def MakeSprites(self):
     self.sprites=[]
 
@@ -57,21 +58,9 @@ class BlockObject(object):
                 s.R.x+=self.R.x
                 s.R.y+=self.R.y
                 self.sprites.append(s)
-   #for pair in self.blocks[self.rot]:
-   #    s = Sprite()
-   #    s.frames=[Rect(self.gfx, 75, 16, 16)]
-   #    s.R.x = pair[0]*16
-   #    s.R.y = pair[1]*16
-   #    s.R.x+=x
-   #    s.R.y+=y
-   #    self.sprites.append(s)
+
 
   def Rotate(self,left):
-    currentBlockDef= self.blocks[self.rot]
-    topleft = self.TopLeft()
-
-
-    start = (self.sprites[0].R.x,self.sprites[0].R.y)
     
     if left:
         self.rot -= 1

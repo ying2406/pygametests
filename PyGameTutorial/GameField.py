@@ -91,6 +91,7 @@ class GameField(object):
             if s.R.bottom > self.F[len(self.F)-1][0].R.bottom:
                 return True
         return False
+
     def MovedOutsideHori(self,block):
         for s in block.sprites:
             if s.R.left <self.F[0][0].R.x:
@@ -99,9 +100,6 @@ class GameField(object):
                return True
         return False
     
-    def Rotate(left):
-
-        pass
     def PutBlock(self, s):
         
         for row in self.F:

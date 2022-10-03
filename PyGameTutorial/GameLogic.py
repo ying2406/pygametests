@@ -1,8 +1,6 @@
 
-                             
 
 
-from this import d
 from BlockObject import BlockObject
 
 class GameLogic(object):
@@ -80,7 +78,7 @@ class GameLogic(object):
             self.CheckBlockCollisions(gc.currentBlock,1,0)
             self.stopInput()
             #gc.player.R.x+=1
-        if gc.leftDown and gc.inputdown == 0:
+        elif gc.leftDown and gc.inputdown == 0:
             gc.currentBlock.MoveHori(-1)
             self.CheckBlockCollisions(gc.currentBlock,-1,0)
             self.stopInput()

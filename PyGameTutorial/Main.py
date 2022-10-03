@@ -23,27 +23,30 @@ gc = GameContext()
 logic = GameLogic(gc)
 renderer = Renderer(g,gc)
 adown=False
-for x in range(0,4):
-    for y in range(0,2):
-        gc.SetCurrentBlock(2)
-        gc.currentBlock.MoveHori(x*2)
-        for z in range(0,23):
-            logic.MoveBlockDown()
+
+def testScenario():
+
+    for x in range(0,4):
+        for y in range(0,2):
+            gc.SetCurrentBlock(2)
+            gc.currentBlock.MoveHori(x*2)
+            for z in range(0,23):
+                logic.MoveBlockDown()
  
-for x in range(0,3):  
-        gc.SetCurrentBlock(1)
-        gc.currentBlock.MoveHori(x*2)
-        for z in range(0,23):
-            logic.MoveBlockDown()
+    for x in range(0,3):  
+            gc.SetCurrentBlock(1)
+            gc.currentBlock.MoveHori(x*2)
+            for z in range(0,23):
+                logic.MoveBlockDown()
  
-gc.SetCurrentBlock(0)
-gc.currentBlock.MoveHori(8)   
-for z in range(0,23):
-    logic.MoveBlockDown()
-gc.SetCurrentBlock(0)
-gc.currentBlock.MoveHori(8)   
-#gc.SetCurrentBlock(2)
-#gc.currentBlock.MoveHori(8)
+    gc.SetCurrentBlock(0)
+    gc.currentBlock.MoveHori(8)   
+    for z in range(0,23):
+        logic.MoveBlockDown()
+    gc.SetCurrentBlock(0)
+    gc.currentBlock.MoveHori(8)   
+    #gc.SetCurrentBlock(2)
+    #gc.currentBlock.MoveHori(8)
 def handleKeyUp(event):
     
     if event.key == pygame.K_a:
